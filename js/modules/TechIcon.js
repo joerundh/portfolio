@@ -1,10 +1,12 @@
-const TechIcon = function(url, toggleOn, toggleOff) {
+const TechIcon = function(url, toggleOn = () => {}, toggleOff = () => {}) {
     let selected = false;
+
+    // Image
 
     const div = document.createElement("div");
     const divCss = `
-        width: 30px;
-        height: 36px;
+        width: 40px;
+        height: 46px;
         padding-top: 3px;
         border-radius: 3px;
         overflow: hidden;
@@ -13,42 +15,43 @@ const TechIcon = function(url, toggleOn, toggleOff) {
         justify-content: center;
         align-items: center;
     `;
+    div.style = divCss;
 
     const img = document.createElement("img");
     img.src = url;
-    const baseCss = `
+    const imgBaseCss = `
         cursor: pointer;
-        transition: width 300ms ease-in-out, height 300ms ease-in-out;
+        transition: width 150ms ease-in-out, height 150ms ease-in-out, margin 150ms ease-in-out;
     `;
 
     const imgPlainCss = () => `
-        ${baseCss}
-        width: 20px;
-        height: 20px;
+        ${imgBaseCss}
+        width: 30px;
+        height: 30px;
         margin: 5px;
     `;
 
     const imgHoverCss = () => `
-        ${baseCss}
-        width: 30px;
-        height: 30px;
-        margin: 0px;
+        ${imgBaseCss}
+        width: 40px;
+        height: 40px;
+        margin: 0;
     `;
 
     img.style = imgPlainCss();
 
-    // Underline
+    // Toggle underline
 
     const underline = document.createElement("div");
     const underlineBaseCss = `
         height: 3px;
-        transition: width 300ms ease-in-out;
-        background-color: white;
+        background-color: #d0d0d0;
+        transition: width 200ms ease-in;
     `;
 
     const underlineOnCss = () => `
-        ${underlineBaseCss},
-        width: 100%;
+        ${underlineBaseCss}
+        width: 40px;
     `;
 
     const underlineOffCss = () => `
@@ -60,7 +63,7 @@ const TechIcon = function(url, toggleOn, toggleOff) {
 
     // Event listeners
 
-    div.addEventListener("hover", e => {
+    div.addEventListener("mouseenter", e => {
         img.style = imgHoverCss();
     });
     div.addEventListener("mouseleave", e => {
@@ -84,3 +87,5 @@ const TechIcon = function(url, toggleOn, toggleOff) {
 
     return { component: div };
 }
+
+export { TechIcon };

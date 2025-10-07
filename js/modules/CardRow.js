@@ -1,5 +1,0 @@
-
-
-const CardRow = function() {
-
-}
