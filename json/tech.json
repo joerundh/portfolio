@@ -1,0 +1,86 @@
+[
+    {
+        "name": "HTML5",
+        "type": "lang",
+        "icon": "images/icons/tech/html5-icon.png",
+        "ref": "html5"
+    },
+    {
+        "name": "CSS3",
+        "type": "lang",
+        "icon": "images/icons/tech/css3-icon.png",
+        "ref": "css3"
+    },
+    {
+        "name": "JavaScript",
+        "type": "lang",
+        "icon": "images/icons/tech/js-icon.png",
+        "ref": "js"
+    },
+    {
+        "name": "React",
+        "type": "framework",
+        "icon": "images/icons/tech/react-icon.png",
+        "ref": "react"
+    },
+    {
+        "name": "Next.js",
+        "type": "framework",
+        "icon": "images/icons/tech/nextjs-icon.png",
+        "ref": "nextjs"
+    },
+    {
+        "name": "Express",
+        "type": "framework",
+        "icon": "images/icons/tech/express-icon.png",
+        "ref": "express"
+    },
+    {
+        "name": "MongoDB",
+        "type": "db",
+        "icon": "images/icons/tech/mongodb-icon.png",
+        "ref": "mongodb"
+    },
+    {
+        "name": "Sanity",
+        "type": "cms",
+        "icon": "images/icons/tech/sanity-icon.png",
+        "ref": "sanity"
+    },
+    {
+        "name": "Clerk",
+        "type": "auth",
+        "icon": "images/icons/tech/clerk-icon.png",
+        "ref": "clerk"
+    },
+    {
+        "name": "Vite.js",
+        "type": "build",
+        "icon": "images/icons/tech/vitejs-icon.png",
+        "ref": "vitejs"
+    },
+    {
+        "name": "JSON",
+        "type": "format",
+        "icon": "images/icons/tech/json-icon.png",
+        "ref": "json"
+    },
+    {
+        "name": "Tailwind CSS",
+        "type": "framework",
+        "icon": "images/icons/tech/tailwindcss-icon.png",
+        "ref": "tailwindcss"
+    },
+    {
+        "name": "LaTeX",
+        "type": "typesetting",
+        "icon": "images/icons/tech/latex-icon.png",
+        "ref": "latex"
+    },
+    {
+        "name": "Chart.js",
+        "type": "graphs",
+        "icon": "images/icons/tech/chartjs-icon.png",
+        "ref": "chartjs"
+    }
+]

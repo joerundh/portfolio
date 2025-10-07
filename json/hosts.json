@@ -1,0 +1,32 @@
+[
+    {
+        "name": "GitHub",
+        "ref": "github",
+        "type": "host",
+        "icon": "/icons/github-icon.png",
+        "urlformat": {
+            "template": "https://github.com/{username}/{ref}",
+            "keys": [ "username", "ref" ]
+        }
+    },
+    {
+        "name": "GitHub Pages",
+        "ref": "github-pages",
+        "type": "host",
+        "icon": "/icons/github-icon.png",
+        "urlformat": {
+            "template": "https://{username}.github.io/{ref}",
+            "keys": [ "username", "ref" ]
+        }
+    },
+    {
+        "name": "Vercel",
+        "ref": "vercel",
+        "type": "host",
+        "icon": "/icons/vercel-icon.png",
+        "urlformat": {
+            "template": "https://{prefix}.vercel.app",
+            "keys": [ "prefix" ]
+        }
+    }
+]
