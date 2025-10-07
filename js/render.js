@@ -1,30 +1,19 @@
-import { Header } from "./header.js";
-import { ProgressBar } from "./progressbar.js";
+import { Header } from "./modules/Header.js";
+import { ProgressBar } from "./modules/ProgressBar.js";
+import { ScrollController } from "./modules/ScrollController.js";
 
 const position = { y: 0, max: 20 };
 
 const header = Header();
 document.body.appendChild(header.component);
 
-const progressBar = ProgressBar(position.max);
+const progressBar = ProgressBar(position.max, { r0: 255, g0: 0, b0: 0 }, { r1: 255, g1: 255, b1: 0 });
 document.body.appendChild(progressBar.component);
 
-window.addEventListener("wheel", e => {
-    if (e.deltaY > 0) {
-        if (position.y < position.max) {
-            position.y = position.y + 1;
-            if (position.y === 1) {
-                header.setToMinimal();
-            }
-            progressBar.moveDown();
-        }
-    } else if (e.deltaY < 0) {
-        if (position.y > 0) {
-            position.y = position.y - 1;
-            if (position.y === 0) {
-                header.setToFull();
-            }
-            progressBar.moveUp();
-        }
-    }
-})
+window.addEventListener("wheel", ScrollController(position.max, {
+    moveUp: progressBar.moveUp,
+    moveDown: progressBar.moveDown,
+    leaveTop: header.setToMinimal,
+    reachTop: header.setToFull
+}
+));

@@ -1,3 +1,0 @@
-const scrollControl = function() {
-
-}
