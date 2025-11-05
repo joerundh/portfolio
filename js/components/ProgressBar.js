@@ -94,7 +94,7 @@ const ProgressBar = function({
                 return true;
             }
             if (prop === "max") {
-                if (typeof value === "number" && value <= 0) {
+                if (typeof value === "number" && value >= 0) {
                     max = value;
                     if (current.value > max) current.value = value;
                 }

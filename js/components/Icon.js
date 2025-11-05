@@ -1,7 +1,9 @@
 const Icon = function({
     src,
+    invert = false,
     size = 50,
     alt = "Icon",
+    title = undefined,
     setEnabled = false,
     setSelected = false,
     selectCallback = () => {},
@@ -21,6 +23,7 @@ const Icon = function({
     // Main element
 
     const div = document.createElement("div");
+    div.title = title;
     const divBaseStyle = () => `
         width: ${size}px;
         height: ${size + 2*lineHeight}px;
@@ -54,6 +57,7 @@ const Icon = function({
         img.alt = alt;
         const imgBaseStyle = `
             transition: width 150ms ease-in-out, height 150ms ease-in-out;
+            ${invert ? "filter: invert(100%);" : ""}
         `;
 
         const imgDefaultStyle = () => `

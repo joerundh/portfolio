@@ -51,7 +51,7 @@ const ScrollController = function({
 
     const proxy = new Proxy({}, {
         get(target, prop, receiver) {
-            if (prop === "state") return { current, max: maximum };
+            if (prop === "plex") return { current, max: maximum };
             if (prop === "current") return current.value;
             if (prop === "max") return maximum.value;
             if (prop === "callback") return callback;

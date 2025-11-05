@@ -17,12 +17,12 @@ import ProjectCard from "./components/ProjectCard.js";
 JSON IMPORT AND TREATMENT
 =======================*/
 
-const profileInfo = await fetch("./json/profile.json").then(res => res.json());
+const profileInfo = await fetch("./data/profile.json").then(res => res.json());
 
-const techRefs = await fetch("./json/tech.json").then(res => res.json());          // Useful for all contexts where only references are needed
+const techRefs = await fetch("./data/tech.json").then(res => res.json());
 
-const projects = await fetch("./json/projects.json").then(res => res.json());      // Remember to map tech refs to tech objects
-const hosts = await fetch("./json/hosts.json").then(res => res.json());
+const projects = await fetch("./data/projects.json").then(res => res.json());
+const hosts = await fetch("./data/hosts.json").then(res => res.json());
 
 const usedTechs = projects.reduce((acc, { techstack }) => {
     techstack.forEach(techRef => {
@@ -157,7 +157,9 @@ const allIconsSlideFade = TimedCalls();
 
 const icons = usedTechs.map((tech, index) => {
     const icon = Icon({
-        src: `./images/assets/${tech.icon}`,
+        src: `./images/assets/${tech.icon.filename}`,
+        invert: !!tech.icon.invert,
+        title: tech.name,
         size: 40,
         selectCallback: () => manager.addToFilter({ ref: tech.ref }),
         unselectCallback: () => manager.removeFromFilter({ ref: tech.ref })
@@ -279,7 +281,7 @@ manager.index.onSet = () => {
     browser.element.innerHTML = "";
 
     if (manager.list.value.length) {
-        const newCards = manager.get().map(project => ProjectCard(project));
+        const newCards = manager.getView().map(project => ProjectCard(project));
         const cardSlideFades = newCards.map(card => SlideFade({
             element: card.element,
             displacement: 50,
@@ -323,12 +325,12 @@ controller.onReachTop = () => {
 
 // Scroll controller simplex callbacks
 
-controller.state.max.onSet = () => {
-    controller.current = 1;
+controller.plex.max.onSet = () => {
     progressBar.max = controller.max;
+    controller.current = 1;
 };
 
-controller.state.current.onSet = () => {
+controller.plex.current.onSet = () => {
     if (controller.current) manager.index.value = controller.current - 1;
     progressBar.current = controller.current;
 };
@@ -344,27 +346,27 @@ document.body.appendChild(header.element);
 init.add("feature", () => {
     featureSlideFade();
 })
-init.timeCall("feature", 700);
+init.timeCall("feature", 500);
 
 init.add("name", () => {
     nameSlideFade();
 })
-init.timeCall("name", 800);
+init.timeCall("name", 500 + 100);
 
 init.add("contact", () => {
     contactSlideFade();
 })
-init.timeCall("contact", 900)
-
-init.add("icons", () => {
-    allIconsSlideFade.run();
-});
-init.timeCall("icons", 1100);
+init.timeCall("contact", 500 + 200)
 
 init.add("description", () => {
     descriptionSlideFase();
 });
-init.timeCall("description", 1000);
+init.timeCall("description", 500 + 300);
+
+init.add("icons", () => {
+    allIconsSlideFade.run();
+});
+init.timeCall("icons", 500 + 400);
 
 
 /*===================

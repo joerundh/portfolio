@@ -27,14 +27,14 @@ const ProjectsManager = function({
         filter.value = filter.value.filter(obj => obj.ref !== tech.ref);
     }
 
-    const get = () => list.value.slice(index.value*3, (index.value + 1)*3);
+    const getView = () => list.value.slice(index.value*3, (index.value + 1)*3);
 
     return {
         list,
         index,
         addToFilter,
         removeFromFilter,
-        get
+        getView
     };
 };
 
