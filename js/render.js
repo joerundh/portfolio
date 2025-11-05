@@ -70,7 +70,7 @@ ADAPTIVE HEADER ELEMENTS
 
 // Feature photo
 
-const feature = Feature("../../images/assets/empty-profile-icon.png");
+const feature = Feature(".images/assets/empty-profile-icon.png");
 const featureSlideFade = SlideFade({
     element: feature.element,
     displacement: 50,
