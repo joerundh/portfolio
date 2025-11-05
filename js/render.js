@@ -17,12 +17,12 @@ import ProjectCard from "./components/ProjectCard.js";
 JSON IMPORT AND TREATMENT
 =======================*/
 
-const profileInfo = await fetch("../json/profile.json").then(res => res.json());
+const profileInfo = await fetch("./json/profile.json").then(res => res.json());
 
-const techRefs = await fetch("../json/tech.json").then(res => res.json());          // Useful for all contexts where only references are needed
+const techRefs = await fetch("./json/tech.json").then(res => res.json());          // Useful for all contexts where only references are needed
 
-const projects = await fetch("../json/projects.json").then(res => res.json());      // Remember to map tech refs to tech objects
-const hosts = await fetch("../json/hosts.json").then(res => res.json());
+const projects = await fetch("./json/projects.json").then(res => res.json());      // Remember to map tech refs to tech objects
+const hosts = await fetch("./json/hosts.json").then(res => res.json());
 
 const usedTechs = projects.reduce((acc, { techstack }) => {
     techstack.forEach(techRef => {
