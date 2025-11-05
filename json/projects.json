@@ -1,0 +1,168 @@
+[
+    {
+        "name": "Share My Read",
+        "ref": "share-my-read",
+        "description": "An app to search for books in the Gutendex API, and to leave reviews and ratings.",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "js" },
+            { "ref": "nextjs" },
+            { "ref": "tailwindcss" },
+            { "ref": "sanity" },
+            { "ref": "clerk" }
+        ],
+        "repository": {
+            "host": { "ref": "github" },
+            "name": "share-my-read"
+        },
+        "deployment": {
+            "host": { "ref": "vercel" },
+            "prefix": "share-my-read"
+        }
+    },
+    {
+        "name": "Paper Trail",
+        "ref": "paper-trail",
+        "description": "An app to add and view references to and descriptions of scientific papers.",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "js" },
+            { "ref": "nextjs" },
+            { "ref": "tailwindcss" },
+            { "ref": "mongodb" },
+            { "ref": "clerk" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "vercel" },
+            "prefix": "paper-trail-psi"
+        }
+    },
+    {
+        "name": "Statistical Sampling",
+        "ref": "statistical-sampling",
+        "description": "Informational page about statistical distributions, with a tool to sample from one of choice and display the data for comparison",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "js" },
+            { "ref": "nextjs" },
+            { "ref": "tailwindcss" },
+            { "ref": "chartjs" },
+            { "ref": "json" },
+            { "ref": "latex" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "vercel" }
+        }
+    },
+    {
+        "name": "Glossary of Quantum Mechanics",
+        "ref": "glossary-of-qm",
+        "description": "A collection of pages describing some basic concepts of quantum mechanics, sorted into categories.",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "js" },
+            { "ref": "nextjs" },
+            { "ref": "tailwindcss" },
+            { "ref": "json" },
+            { "ref": "latex" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "vercel" }
+        }
+    },
+    {
+        "name": "Book Keeper",
+        "ref": "book-keeper",
+        "description": "An app to search for books in the Gutendex API from search query, topic, or language, with favourites and a reading list.",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "css3" },
+            { "ref": "js" },
+            { "ref": "react" },
+            { "ref": "vitejs" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "vercel" },
+            "prefix": "book-keeper-blond"
+        }
+    },
+    {
+        "name": "Colour Chooser",
+        "ref": "colour-chooser",
+        "description": "A tool to choose colours based on RGB, HSL, CMYK, or by name.",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "css3" },
+            { "ref": "js" },
+            { "ref": "react" },
+            { "ref": "vitejs" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "github-pages" }
+        }
+    },
+    {
+        "name": "LaTeX to Image",
+        "ref": "latex-to-image",
+        "description": "A tool to enter LaTeX and receive an image of the resulting mathematics, downloadable as SVG or PNG.",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "css3" },
+            { "ref": "js" },
+            { "ref": "vitejs" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "github-pages" }
+        }
+    },
+    {
+        "name": "Book and Author Search",
+        "ref": "book-and-author-search",
+        "description": "",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "css3" },
+            { "ref": "js" },
+            { "ref": "vitejs" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "github-pages" }
+        }
+    },
+    {
+        "name": "Craftsvilla",
+        "ref": "craftsvilla",
+        "description": "A",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "css3" }
+        ],
+        "repository": {
+            "host": { "ref": "github" }
+        },
+        "deployment": {
+            "host": { "ref": "github-pages" }
+        }
+    }
+]

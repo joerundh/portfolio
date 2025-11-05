@@ -1,0 +1,114 @@
+[
+    {
+        "index": 0,
+        "name": "HTML5",
+        "type": "lang",
+        "icon": "html5-icon.png",
+        "ref": "html5",
+        "display": true
+    },
+    {
+        "index": 1,
+        "name": "CSS3",
+        "type": "lang",
+        "icon": "css3-icon.png",
+        "ref": "css3",
+        "display": true
+    },
+    {
+        "index": 2,
+        "name": "JavaScript",
+        "type": "lang",
+        "icon": "js-icon.png",
+        "ref": "js",
+        "display": true
+    },
+    {
+        "index": 3,
+        "name": "JSON",
+        "type": "format",
+        "icon": "json-icon.png",
+        "ref": "json",
+        "display": false
+    },
+    {
+        "index": 4,
+        "name": "React",
+        "type": "framework",
+        "icon": "react-icon.png",
+        "ref": "react",
+        "display": true
+    },
+    {
+        "index": 5,
+        "name": "Next.js",
+        "type": "framework",
+        "icon": "nextjs-icon.png",
+        "ref": "nextjs",
+        "display": true
+    },
+    {
+        "index": 6,
+        "name": "Tailwind CSS",
+        "type": "framework",
+        "icon": "tailwindcss-icon.png",
+        "ref": "tailwindcss",
+        "display": true
+    },
+    {
+        "index": 7,
+        "name": "MongoDB",
+        "type": "db",
+        "icon": "mongodb-icon.png",
+        "ref": "mongodb",
+        "display": true
+    },
+    {
+        "index": 8,
+        "name": "Express",
+        "type": "framework",
+        "icon": "express-icon.png",
+        "ref": "express",
+        "display": true
+    },
+    {
+        "index": 9,
+        "name": "Sanity",
+        "type": "cms",
+        "icon": "sanity-icon.png",
+        "ref": "sanity",
+        "display": false
+    },
+    {
+        "index": 10,
+        "name": "Clerk",
+        "type": "auth",
+        "icon": "clerk-icon.png",
+        "ref": "clerk",
+        "display": false
+    },
+    {
+        "index": 11,
+        "name": "Vite.js",
+        "type": "build",
+        "icon": "vitejs-icon.png",
+        "ref": "vitejs",
+        "display": false
+    },
+    {
+        "index": 12,
+        "name": "LaTeX",
+        "type": "typesetting",
+        "icon": "latex-icon.png",
+        "ref": "latex",
+        "display": true
+    },
+    {
+        "index": 13,
+        "name": "Chart.js",
+        "type": "graphs",
+        "icon": "chartjs-icon.png",
+        "ref": "chartjs",
+        "display": false
+    }
+]
