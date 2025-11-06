@@ -12,12 +12,10 @@
             { "ref": "clerk" }
         ],
         "repository": {
-            "host": { "ref": "github" },
-            "name": "share-my-read"
+            "host": { "ref": "github" }
         },
         "deployment": {
-            "host": { "ref": "vercel" },
-            "prefix": "share-my-read"
+            "host": { "ref": "vercel" }
         }
     },
     {
@@ -156,13 +154,32 @@
         "description": "A",
         "techstack": [
             { "ref": "html5" },
-            { "ref": "css3" }
+            { "ref": "css3" },
+            { "ref": "js" }
         ],
         "repository": {
             "host": { "ref": "github" }
         },
         "deployment": {
             "host": { "ref": "github-pages" }
+        }
+    },
+    {
+        "name": "Project Planet: Mars",
+        "ref": "mars",
+        "description": "",
+        "techstack": [
+            { "ref": "html5" },
+            { "ref": "css3" },
+            { "ref": "js" }
+        ],
+        "repository": {
+            "host": { "ref": "github" },
+            "pathname": "project-planet-mars"
+        },
+        "deployment": {
+            "host": { "ref": "github-pages" },
+            "pathname": "project-planet-mars"
         }
     }
 ]

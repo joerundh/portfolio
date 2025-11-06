@@ -3,27 +3,36 @@
         "name": "GitHub",
         "ref": "github",
         "type": "host",
-        "icon": "/icons/github-icon.png",
+        "icon": {
+            "filename": "github-icon.png",
+            "invert": true
+        },
         "urlformat": {
-            "template": "https://github.com/{username}/{ref}",
-            "keys": [ "username", "ref" ]
+            "template": "https://github.com/{username}/{pathname}",
+            "keys": [ "username", "pathname" ]
         }
     },
     {
         "name": "GitHub Pages",
         "ref": "github-pages",
         "type": "host",
-        "icon": "/icons/github-icon.png",
+        "icon": {
+            "filename": "github-icon.png",
+            "invert": true
+        },
         "urlformat": {
-            "template": "https://{username}.github.io/{ref}",
-            "keys": [ "username", "ref" ]
+            "template": "https://{username}.github.io/{pathname}",
+            "keys": [ "username", "pathname" ]
         }
     },
     {
         "name": "Vercel",
         "ref": "vercel",
         "type": "host",
-        "icon": "/icons/vercel-icon.png",
+        "icon": {
+            "filename": "vercel-icon.png",
+            "invert": true
+        },
         "urlformat": {
             "template": "https://{prefix}.vercel.app",
             "keys": [ "prefix" ]

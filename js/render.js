@@ -19,10 +19,12 @@ JSON IMPORT AND TREATMENT
 
 const profileInfo = await fetch("./data/profile.json").then(res => res.json());
 
-const techRefs = await fetch("./data/tech.json").then(res => res.json());
+const techs = await fetch("./data/tech.json").then(res => res.json());
 
 const projects = await fetch("./data/projects.json").then(res => res.json());
-const hosts = await fetch("./data/hosts.json").then(res => res.json());
+projects.forEach(project => {
+    project.techstack = project.techstack.map(tech => techs.find(obj => obj.ref === tech.ref));
+});
 
 const usedTechs = projects.reduce((acc, { techstack }) => {
     techstack.forEach(techRef => {
@@ -32,7 +34,7 @@ const usedTechs = projects.reduce((acc, { techstack }) => {
     });
     return acc;
 }, [])
-    .map(techRef => techRefs.find(obj => obj.ref === techRef.ref))
+    .map(techRef => techs.find(obj => obj.ref === techRef.ref))
     .filter(tech => tech.display)
     .sort((techA, techB) => techA.index - techB.index);
 
@@ -104,6 +106,7 @@ contact.style = `
 const email = document.createElement("a");
 email.innerText = profileInfo.email;
 email.href = `mailto:${profileInfo.email.replace("(at)", "@")}`;
+email.title = `E-mail: ${profileInfo.email}`
 email.style = `
     color: #999;
     font-family: "IBM Plex";
@@ -123,6 +126,7 @@ const githubUrl = `https://github.com/${profileInfo.github.username}`
 github.innerText = githubUrl;
 github.href = githubUrl;
 github.target = "_blank";
+github.title = `Github: ${profileInfo.github.username}`;
 github.style = `
     color: #999;
     font-family: "IBM Plex";
@@ -226,7 +230,7 @@ PROJECTS
 
 // Project manager
 
-const manager = ProjectsManager({ projects, techs: techRefs });
+const manager = ProjectsManager({ projects, techs: techs });
 
 // Project browser
 
