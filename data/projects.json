@@ -2,10 +2,8 @@
     {
         "name": "Share My Read",
         "ref": "share-my-read",
-        "description": "An app to search for books in the Gutendex API, and to leave reviews and ratings.",
+        "description": "An app to search for books in the Gutendex API, and to leave reviews and ratings. Employs Sanity for storage, and features authentication by Clerk.",
         "techstack": [
-            { "ref": "html5" },
-            { "ref": "js" },
             { "ref": "nextjs" },
             { "ref": "tailwindcss" },
             { "ref": "sanity" },
@@ -21,10 +19,8 @@
     {
         "name": "Paper Trail",
         "ref": "paper-trail",
-        "description": "An app to add and view references to and descriptions of scientific papers.",
+        "description": "An app to add and view references to and descriptions of scientific papers. Storage is done with MongoDb, and authentication by Clerk.",
         "techstack": [
-            { "ref": "html5" },
-            { "ref": "js" },
             { "ref": "nextjs" },
             { "ref": "tailwindcss" },
             { "ref": "mongodb" },
@@ -41,10 +37,8 @@
     {
         "name": "Statistical Sampling",
         "ref": "statistical-sampling",
-        "description": "Informational page about statistical distributions, with a tool to sample from one of choice and display the data for comparison",
+        "description": "Informational page about statistical distributions, with a tool to sample from one of choice from local API routes, and display the data for comparison.",
         "techstack": [
-            { "ref": "html5" },
-            { "ref": "js" },
             { "ref": "nextjs" },
             { "ref": "tailwindcss" },
             { "ref": "chartjs" },
@@ -61,10 +55,8 @@
     {
         "name": "Glossary of Quantum Mechanics",
         "ref": "glossary-of-qm",
-        "description": "A collection of pages describing some basic concepts of quantum mechanics, sorted into categories.",
+        "description": "A collection of pages describing basic concepts of quantum mechanics, sorted into categories. Page browsing includes server-side pagination.",
         "techstack": [
-            { "ref": "html5" },
-            { "ref": "js" },
             { "ref": "nextjs" },
             { "ref": "tailwindcss" },
             { "ref": "json" },
@@ -82,10 +74,8 @@
         "ref": "book-keeper",
         "description": "An app to search for books in the Gutendex API from search query, topic, or language, with favourites and a reading list.",
         "techstack": [
-            { "ref": "html5" },
-            { "ref": "css3" },
-            { "ref": "js" },
             { "ref": "react" },
+            { "ref": "css3" },
             { "ref": "vitejs" }
         ],
         "repository": {
@@ -99,12 +89,10 @@
     {
         "name": "Colour Chooser",
         "ref": "colour-chooser",
-        "description": "A tool to choose colours based on RGB, HSL, CMYK, or by name.",
+        "description": "A tool to choose colours based on RGB, HSL, CMYK, or by name. The latest colour setting is stored in local storage.",
         "techstack": [
-            { "ref": "html5" },
-            { "ref": "css3" },
-            { "ref": "js" },
             { "ref": "react" },
+            { "ref": "css3" },
             { "ref": "vitejs" }
         ],
         "repository": {
@@ -117,7 +105,7 @@
     {
         "name": "LaTeX to Image",
         "ref": "latex-to-image",
-        "description": "A tool to enter LaTeX and receive an image of the resulting mathematics, downloadable as SVG or PNG.",
+        "description": "A tool to enter LaTeX and receive an image of the resulting mathematics. Images may have a text colour and background colour of choice, custom scaling, and are downloadable as SVG or PNG.",
         "techstack": [
             { "ref": "html5" },
             { "ref": "css3" },
@@ -134,7 +122,7 @@
     {
         "name": "Book and Author Search",
         "ref": "book-and-author-search",
-        "description": "",
+        "description": "A tool to search for titles, authors and genres in the Open Library. Favourite titles and authors can be stored, for which local storage is employed.",
         "techstack": [
             { "ref": "html5" },
             { "ref": "css3" },
@@ -151,11 +139,10 @@
     {
         "name": "Craftsvilla",
         "ref": "craftsvilla",
-        "description": "A",
+        "description": "A page made for a fictitous company Craftsvilla, offering spare-time arts and crafts activities, with accessories for sale and workspace available.",
         "techstack": [
             { "ref": "html5" },
-            { "ref": "css3" },
-            { "ref": "js" }
+            { "ref": "css3" }
         ],
         "repository": {
             "host": { "ref": "github" }
@@ -167,11 +154,10 @@
     {
         "name": "Project Planet: Mars",
         "ref": "mars",
-        "description": "",
+        "description": "An informative page on the planet Mars.",
         "techstack": [
             { "ref": "html5" },
-            { "ref": "css3" },
-            { "ref": "js" }
+            { "ref": "css3" }
         ],
         "repository": {
             "host": { "ref": "github" },

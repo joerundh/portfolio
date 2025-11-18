@@ -6,16 +6,18 @@ const ProjectCard = function(project) {
     div.style = `
         width: 500px;
         padding: 40px;
-        height: 600px;
+        height: 650px;
         display: flex;
         font-family: "IBM Plex";
         flex-direction: column;
         justify-content: start;
         align-items: center;
         gap: 30px;
-        border: 1px solid #999;
-        color: #bbb;
-        border-radius: 20px;
+        border: 1px solid #444;
+        color: #ccc;
+        border-radius: 10px;
+        backdrop-filter: invert(15%);
+        box-shadow: 5px 5px #111;
     `;
 
     // Title
@@ -25,19 +27,21 @@ const ProjectCard = function(project) {
     title.style = `
         text-align: center;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 22px;
+        text-shadow: 2px 2px black;
     `;
     div.append(title);
 
     // Feature
 
     const feature = document.createElement("img");
-    feature.src = "./images/assets/globe-line-icon.png";
+    feature.src = `./images/assets/screenshots/${project.ref}-screenshot.png`;
     feature.width = 400;
-    feature.height = 250;
+    feature.height = 225;
     feature.style = `
-        border: 1px solid #999;
+        border: 1px solid #444;
         border-radius: 5px;
+        box-shadow: 5px 5px #111;
     `;
     div.append(feature)
 
@@ -49,23 +53,13 @@ const ProjectCard = function(project) {
         display: flex;
         flex-direction: row;
         gap: 10px;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
     `;
 
-    /*
-    const iconsLabel = document.createElement("span");
-    iconsLabel.innerText = "Techstack:";
-    iconsLabel.style = `
-    
-        text-shadow: 2px 2px black;
-    `;
-    icons.appendChild(iconsLabel);
-    */
-
     project.techstack.forEach(tech => {
         const icon = document.createElement("img");
-        icon.src = `./images/assets/${tech.icon.filename}`;
+        icon.src = `./images/assets/icons/${tech.icon.filename}`;
         icon.alt = `${tech.name} icon`;
         icon.title = tech.name;
         icon.style = `
@@ -76,7 +70,6 @@ const ProjectCard = function(project) {
         
         icons.appendChild(icon);
     });
-
     div.append(icons);
 
     // Links
@@ -114,19 +107,20 @@ const ProjectCard = function(project) {
         height: 20px;
         ${repositoryHost.icon.invert ? "filter: invert(100%);" : ""}
     `;
-    repositoryIcon.src = `./images/assets/${repositoryHost.icon.filename}`;
+    repositoryIcon.src = `./images/assets/icons/${repositoryHost.icon.filename}`;
     repositoryLink.appendChild(repositoryIcon);
 
     const repositoryLabel = document.createElement("span");
     repositoryLabel.innerText = "Repository";
     repositoryLabel.style = `
-        color: #999;
+        color: #bbb;
+        text-shadow: 2px 2px black;
         transition: color 100ms ease-in-out;
     `;
     repositoryLink.appendChild(repositoryLabel);
 
     repositoryLink.onmouseenter = e => { repositoryLabel.style.color = "#fff"; repositoryLabel.style.textDecoration = "underline"; };
-    repositoryLink.onmouseleave = e => { repositoryLabel.style.color = "#999"; repositoryLabel.style.textDecoration = "none"; }
+    repositoryLink.onmouseleave = e => { repositoryLabel.style.color = "#bbb"; repositoryLabel.style.textDecoration = "none"; }
 
     repositoryLink.href =
         repositoryHost.urlformat.keys.map(key => {
@@ -170,19 +164,20 @@ const ProjectCard = function(project) {
         height: 20px;
         ${deploymentHost.icon.invert ? "filter: invert(100%);" : ""}
     `;
-    deploymentIcon.src = `./images/assets/${deploymentHost.icon.filename}`;
+    deploymentIcon.src = `./images/assets/icons/${deploymentHost.icon.filename}`;
     deploymentLink.appendChild(deploymentIcon);
 
     const deploymentLabel = document.createElement("span");
     deploymentLabel.innerText = "Deployment";
     deploymentLabel.style = `
-        color: #999;
+        color: #bbb;
+        text-shadow: 2px 2px black;
         transition: color 100ms ease-in-out;
     `;
     deploymentLink.appendChild(deploymentLabel);
 
     deploymentLink.onmouseenter = e => { deploymentLabel.style.color = "#fff"; deploymentLabel.style.textDecoration = "underline"; };
-    deploymentLink.onmouseleave = e => { deploymentLabel.style.color = "#999"; deploymentLabel.style.textDecoration = "none"; }
+    deploymentLink.onmouseleave = e => { deploymentLabel.style.color = "#bbb"; deploymentLabel.style.textDecoration = "none"; }
 
     deploymentLink.href =
         deploymentHost.urlformat.keys.map(key => {
@@ -201,7 +196,7 @@ const ProjectCard = function(project) {
         })
         .reduce((url, { key, value }) => url.replaceAll(`{${key}}`, value), deploymentHost.urlformat.template);
     
-    links.append(deploymentLink)
+    links.append(deploymentLink);
 
     // Description
 
@@ -209,8 +204,9 @@ const ProjectCard = function(project) {
         const description = document.createElement("p");
         description.innerText = project.description;
         description.style = `
+            width: 100%;
             font-size: 16px;
-            color: #bbb;
+            color: #ddd;
             text-shadow: 2px 2px black;
         `;
         div.appendChild(description);

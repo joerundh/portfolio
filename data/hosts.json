@@ -31,7 +31,7 @@
         "type": "host",
         "icon": {
             "filename": "vercel-icon.png",
-            "invert": true
+            "invert": false
         },
         "urlformat": {
             "template": "https://{prefix}.vercel.app",
