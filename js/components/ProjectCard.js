@@ -17,8 +17,18 @@ const ProjectCard = function(project) {
         color: #ccc;
         border-radius: 10px;
         backdrop-filter: invert(15%);
+        transform: none;
         box-shadow: 5px 5px #111;
+        transition: transform ease-in-out 150ms, backdrop-filter ease-in-out 150ms;
     `;
+    div.onmousemove = () => {
+        div.style.transform = "scale(110%)";
+        div.style.backdropFilter = "invert(25%)";
+    }
+    div.onmouseleave = () => {
+        div.style.transform = "none";
+        div.style.backdropFilter = "invert(15%)";
+    }
 
     // Title
 
