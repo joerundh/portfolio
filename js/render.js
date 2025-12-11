@@ -377,6 +377,8 @@ init.timeCall("icons", 500 + 400);
 OKAY, READY TO SET UP
 ===================*/
 
+// Scroll controller
+
 addScrollListener();
 
 // Run initial timed calls
