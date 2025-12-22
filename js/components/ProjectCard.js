@@ -6,7 +6,7 @@ const ProjectCard = function(project) {
     div.style = `
         width: 500px;
         padding: 40px;
-        height: 650px;
+        height: 600px;
         display: flex;
         font-family: "IBM Plex";
         flex-direction: column;
