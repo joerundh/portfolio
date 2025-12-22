@@ -4,7 +4,7 @@ const hosts = await fetch("./data/hosts.json").then(res => res.json());
 const ProjectCard = function(project) {
     const div = document.createElement("div");
     div.style = `
-        width: 500px;
+        width: 450px;
         padding: 40px;
         height: 600px;
         display: flex;
@@ -37,7 +37,7 @@ const ProjectCard = function(project) {
     title.style = `
         text-align: center;
         font-weight: normal;
-        font-size: 22px;
+        font-size: 20px;
         text-shadow: 2px 2px black;
     `;
     div.append(title);
