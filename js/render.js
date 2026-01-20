@@ -377,6 +377,8 @@ init.timeCall("icons", 500 + 400);
 OKAY, READY TO SET UP
 ===================*/
 
+document.title = profileInfo.name;
+
 addScrollListener();
 
 // Run initial timed calls
