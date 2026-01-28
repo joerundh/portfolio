@@ -45,7 +45,7 @@ const ProjectCard = function(project) {
     // Feature
 
     const feature = document.createElement("img");
-    feature.src = `/assets/screenshots/${project.ref}-screenshot.png`;
+    feature.src = `./assets/screenshots/${project.ref}-screenshot.png`;
     feature.width = 400;
     feature.height = 225;
     feature.style = `
@@ -69,7 +69,7 @@ const ProjectCard = function(project) {
 
     project.techstack.forEach(tech => {
         const icon = document.createElement("img");
-        icon.src = `/assets/icons/${tech.icon.filename}`;
+        icon.src = `./assets/icons/${tech.icon.filename}`;
         icon.alt = `${tech.name} icon`;
         icon.title = tech.name;
         icon.style = `
@@ -117,7 +117,7 @@ const ProjectCard = function(project) {
         height: 20px;
         ${repositoryHost.icon.invert ? "filter: invert(100%);" : ""}
     `;
-    repositoryIcon.src = `/assets/icons/${repositoryHost.icon.filename}`;
+    repositoryIcon.src = `./assets/icons/${repositoryHost.icon.filename}`;
     repositoryLink.appendChild(repositoryIcon);
 
     const repositoryLabel = document.createElement("span");
@@ -174,7 +174,7 @@ const ProjectCard = function(project) {
         height: 20px;
         ${deploymentHost.icon.invert ? "filter: invert(100%);" : ""}
     `;
-    deploymentIcon.src = `/assets/icons/${deploymentHost.icon.filename}`;
+    deploymentIcon.src = `./assets/icons/${deploymentHost.icon.filename}`;
     deploymentLink.appendChild(deploymentIcon);
 
     const deploymentLabel = document.createElement("span");

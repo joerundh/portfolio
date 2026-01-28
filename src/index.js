@@ -71,7 +71,7 @@ ADAPTIVE HEADER ELEMENTS
 
 // Feature photo
 
-const feature = Feature("/assets/profile/feature.jpg");
+const feature = Feature("./assets/profile/feature.jpg");
 const featureSlideFade = SlideFade({
     element: feature.element,
     displacement: 50,
@@ -160,7 +160,7 @@ const allIconsSlideFade = TimedCalls();
 
 const icons = usedTechs.map((tech, index) => {
     const icon = Icon({
-        src: `/assets/icons/${tech.icon.filename}`,
+        src: `./assets/icons/${tech.icon.filename}`,
         invert: !!tech.icon.invert,
         title: tech.name,
         size: 40,
