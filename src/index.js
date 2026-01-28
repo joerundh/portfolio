@@ -1,27 +1,26 @@
-import Header from "./components/Header.js";
-import Feature from "./components/Feature.js";
-import ScrollController from "./modules/ScrollController.js";
-import TimedCalls from "./modules/TimedCalls.js";
-import Profile from "./components/Profile.js";
-import Name from "./components/Name.js";
-import SlideFade from "./modules/SlideFade.js";
-import Description from "./components/Description.js";
-import Icon from "./components/Icon.js";
-import ProgressBar from "./components/ProgressBar.js";
-import ProjectsManager from "./modules/ProjectsManager.js";
-import ProjectsBrowser from "./components/ProjectsBrowser.js";
-import ProjectCard from "./components/ProjectCard.js";
+import Header from "/src/components/Header.js";
+import Feature from "/src/components/Feature.js";
+import ScrollController from "/src/modules/ScrollController.js";
+import TimedCalls from "/src/modules/TimedCalls.js";
+import Profile from "/src/components/Profile.js";
+import Name from "/src/components/Name.js";
+import SlideFade from "/src/modules/SlideFade.js";
+import Description from "/src/components/Description.js";
+import Icon from "/src/components/Icon.js";
+import ProgressBar from "/src/components/ProgressBar.js";
+import ProjectsManager from "/src/modules/ProjectsManager.js";
+import ProjectsBrowser from "/src/components/ProjectsBrowser.js";
+import ProjectCard from "/src/components/ProjectCard.js";
 
 
 /*=======================
 JSON IMPORT AND TREATMENT
 =======================*/
 
-const profileInfo = await fetch("./data/profile.json").then(res => res.json());
+import profileInfo from "/src/data/profile.json";
+import techs from "/src/data/tech.json";
+import projects from "/src/data/projects.json";
 
-const techs = await fetch("./data/tech.json").then(res => res.json());
-
-const projects = await fetch("./data/projects.json").then(res => res.json());
 projects.forEach(project => {
     project.techstack = project.techstack.map(tech => techs.find(obj => obj.ref === tech.ref));
 });
@@ -72,7 +71,7 @@ ADAPTIVE HEADER ELEMENTS
 
 // Feature photo
 
-const feature = Feature("./images/assets/profile/feature.jpg");
+const feature = Feature("/assets/profile/feature.jpg");
 const featureSlideFade = SlideFade({
     element: feature.element,
     displacement: 50,
@@ -161,7 +160,7 @@ const allIconsSlideFade = TimedCalls();
 
 const icons = usedTechs.map((tech, index) => {
     const icon = Icon({
-        src: `./images/assets/icons/${tech.icon.filename}`,
+        src: `/assets/icons/${tech.icon.filename}`,
         invert: !!tech.icon.invert,
         title: tech.name,
         size: 40,

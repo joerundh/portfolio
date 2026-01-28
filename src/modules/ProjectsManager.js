@@ -1,4 +1,4 @@
-import Simplex from "./Simplex.js";
+import Simplex from "/src/modules/Simplex.js";
 
 const ProjectsManager = function({
     projects,

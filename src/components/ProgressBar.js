@@ -1,4 +1,4 @@
-import Simplex from "../modules/Simplex.js";
+import Simplex from "/src/modules/Simplex.js";
 
 const ProgressBar = function({
     init = 0,                                           // 0 | 1 | 2 | .. | max

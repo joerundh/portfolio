@@ -1,5 +1,5 @@
-const profile = await fetch("./data/profile.json").then(res => res.json());
-const hosts = await fetch("./data/hosts.json").then(res => res.json());
+import profile from "/src/data/profile.json";
+import hosts from "/src/data/hosts.json";
 
 const ProjectCard = function(project) {
     const div = document.createElement("div");
@@ -45,7 +45,7 @@ const ProjectCard = function(project) {
     // Feature
 
     const feature = document.createElement("img");
-    feature.src = `./images/assets/screenshots/${project.ref}-screenshot.png`;
+    feature.src = `/assets/screenshots/${project.ref}-screenshot.png`;
     feature.width = 400;
     feature.height = 225;
     feature.style = `
@@ -69,7 +69,7 @@ const ProjectCard = function(project) {
 
     project.techstack.forEach(tech => {
         const icon = document.createElement("img");
-        icon.src = `./images/assets/icons/${tech.icon.filename}`;
+        icon.src = `/assets/icons/${tech.icon.filename}`;
         icon.alt = `${tech.name} icon`;
         icon.title = tech.name;
         icon.style = `
@@ -117,7 +117,7 @@ const ProjectCard = function(project) {
         height: 20px;
         ${repositoryHost.icon.invert ? "filter: invert(100%);" : ""}
     `;
-    repositoryIcon.src = `./images/assets/icons/${repositoryHost.icon.filename}`;
+    repositoryIcon.src = `/assets/icons/${repositoryHost.icon.filename}`;
     repositoryLink.appendChild(repositoryIcon);
 
     const repositoryLabel = document.createElement("span");
@@ -174,7 +174,7 @@ const ProjectCard = function(project) {
         height: 20px;
         ${deploymentHost.icon.invert ? "filter: invert(100%);" : ""}
     `;
-    deploymentIcon.src = `./images/assets/icons/${deploymentHost.icon.filename}`;
+    deploymentIcon.src = `/assets/icons/${deploymentHost.icon.filename}`;
     deploymentLink.appendChild(deploymentIcon);
 
     const deploymentLabel = document.createElement("span");

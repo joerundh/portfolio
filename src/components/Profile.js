@@ -1,7 +1,7 @@
 const Profile = function() {
     const div = document.createElement("div");
     const divBaseStyle = `
-        min-width: 1000px;
+        width: 1000px;
         display: flex;
         flex-direction: row;
         justify-content: start;
